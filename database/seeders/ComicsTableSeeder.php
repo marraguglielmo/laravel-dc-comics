@@ -27,8 +27,7 @@ class ComicsTableSeeder extends Seeder
             $new_comic->type = $comic['type'];
             $new_comic->artists = json_encode($comic['artists']) ;
             $new_comic->writers = json_encode($comic['writers']);
-            dump($new_comic);
-            $new_comic->save();
+            // $new_comic->save();
         }
     }
 }
