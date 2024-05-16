@@ -9,7 +9,6 @@ class Helper{
         $original_slug = $slug;
 
         $exist = $model::where('slug', $slug)->first();
-        dump($exist);
 
         $count = 1;
         while($exist){
