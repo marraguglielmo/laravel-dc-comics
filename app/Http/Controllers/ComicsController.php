@@ -70,8 +70,15 @@ class ComicsController extends Controller
     public function update(Request $request, Comic $comic)
     {
         $form_data = $request->all();
-        dump($form_data);
-        // return redirect()->route('comics.show', $comic);
+        if($form_data['title'] === $comic->title){
+            $form_data['slug'] = $comic->slug;
+        }else{
+            $form_data['slug'] =  Helper::generateSlug($form_data['title'], new Comic);
+        }
+
+        // effettuo il fill dei dati e li salva aggiornando il database
+        $comic->update($form_data);
+        return redirect()->route('comics.show', $comic);
     }
 
     /**
