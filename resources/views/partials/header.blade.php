@@ -10,7 +10,7 @@
                 <a class="nav-link text-white" href="{{route('comics.index')}}">Fumetti</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="{{route('comics.create')}}">Nuovo Fumetto</a>
+                <a class="nav-link text-white bg-danger rounded-3" href="{{route('comics.create')}}">Nuovo Fumetto</a>
               </li>
             </ul>
           </div>

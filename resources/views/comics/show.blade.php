@@ -13,7 +13,7 @@
               </div>
               <div class="col-md-8">
                 <div class="card-body text-start">
-                  <h3 class="card-title fw-semibold ">{{$comic->title}}</h3>
+                  <h3 class="card-title fw-semibold ">{{$comic->title}} <a href="{{route('comics.edit', $comic)}}" class="btn btn-warning ms-1"><i class="fa-solid fa-pencil"></i></a></h3>
                   <p class="card-text">{{$comic->description}}</p>
                   <div class="card-text text-body-secondary">
                         <span class="d-block">Artisti: {{$comic->artists}}</span>
