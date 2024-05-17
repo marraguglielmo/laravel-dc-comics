@@ -37,7 +37,7 @@ class ComicsController extends Controller
         $new_comic = new Comic();
 
         // form_data non contiene lo slug, quindi lo aggiungo
-        $form_data['slug'] = Helper::generateSlug($form_data['titolo'], new Comic);
+        $form_data['slug'] = Helper::generateSlug($form_data['title'], new Comic);
 
         $new_comic->fill($form_data);
 
@@ -49,9 +49,9 @@ class ComicsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Comic $comic)
     {
-        $comic = Comic::find($id);
+        // $comic = Comic::find($id);
         // dump($comic);
         return view('comics.show', compact('comic'));
     }
@@ -59,17 +59,19 @@ class ComicsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $form_data = $request->all();
+        dump($form_data);
+        // return redirect()->route('comics.show', $comic);
     }
 
     /**
