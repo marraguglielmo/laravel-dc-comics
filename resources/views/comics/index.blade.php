@@ -6,6 +6,12 @@
 <div class="container">
     <h1>Lista fumetti</h1>
     <div class="row">
+
+        @if (session('deleted'))
+        <div class="alert alert-success" role="alert">
+            {{session('deleted')}}
+          </div>
+        @endif
         <table class="table">
             <thead>
               <tr>
