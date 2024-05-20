@@ -15,7 +15,7 @@ class ComicsTableSeeder extends Seeder
     public function run(): void
     {
         $comics = config('comics');
-        foreach($comics as $comic){
+        foreach ($comics as $comic) {
             $new_comic = new Comic();
             $new_comic->title = $comic['title'];
             $new_comic->slug = Helper::generateSlug($new_comic->title, new Comic());
@@ -25,7 +25,7 @@ class ComicsTableSeeder extends Seeder
             $new_comic->series = $comic['series'];
             $new_comic->sale_date = $comic['sale_date'];
             $new_comic->type = $comic['type'];
-            $new_comic->artists = implode(', ', $comic['artists']) ;
+            $new_comic->artists = implode(', ', $comic['artists']);
             $new_comic->writers = implode(', ', $comic['writers']);
 
             $new_comic->save();

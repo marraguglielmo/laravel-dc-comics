@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('thumb');
             $table->string('price', 10);
             $table->string('series', 50);
-            $table->date('sale_date',);
+            $table->date('sale_date');
             $table->string('type', 30);
             $table->text('artists');
             $table->text('writers');
