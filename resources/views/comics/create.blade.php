@@ -51,8 +51,13 @@
 
                 <div class="mb-3">
                     <label for="title" class="form-label">Titolo</label>
-                    <input type="text" name="title" id="title" placeholder="title" class="form-control"
-                        value="{{ old('title') }}">
+                    <input type="text" name="title" id="title" placeholder="title"
+                        class="form-control @error('title') is-invalid @enderror" value="{{ old('title') }}">
+                    @error('title')
+                        <small class="text-danger fw-semibold">
+                            {{ $message }}
+                        </small>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Descrizione</label>
@@ -60,38 +65,73 @@
                 </div>
                 <div class="mb-3">
                     <label for="thumb" class="form-label">Immagine</label>
-                    <input type="text" name="thumb" id="thumb" placeholder="Immagine" class="form-control"
-                        value="{{ old('thumb') }}">
+                    <input type="text" name="thumb" id="thumb" placeholder="Immagine"
+                        class="form-control @error('thumb') is-invalid @enderror" value="{{ old('thumb') }}">
+                    @error('thumb')
+                        <small class="text-danger fw-semibold">
+                            {{ $message }}
+                        </small>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="price" class="form-label">Prezzo</label>
-                    <input type="text" name="price" id="price" placeholder="Prezzo" class="form-control"
-                        value="{{ old('price') }}">
+                    <input type="text" name="price" id="price" placeholder="Prezzo"
+                        class="form-control @error('price') is-invalid @enderror" value="{{ old('price') }}">
+                    @error('price')
+                        <small class="text-danger fw-semibold">
+                            {{ $message }}
+                        </small>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="series" class="form-label">Serie</label>
-                    <input type="text" name="series" id="series" placeholder="Prezzo" class="form-control"
-                        value="{{ old('series') }}">
+                    <input type="text" name="series" id="series" placeholder="Prezzo"
+                        class="form-control @error('series') is-invalid @enderror" value="{{ old('series') }}">
+                    @error('series')
+                        <small class="text-danger fw-semibold">
+                            {{ $message }}
+                        </small>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="sale_date" class="form-label">Giorno di uscita</label>
-                    <input type="date" name="sale_date" id="sale_date" placeholder="Uscita" class="form-control"
-                        value="{{ old('sale_date') }}">
+                    <input type="date" name="sale_date" id="sale_date" placeholder="Uscita"
+                        class="form-control @error('sale_date') is-invalid @enderror" value="{{ old('sale_date') }}">
+                    @error('sale_date')
+                        <small class="text-danger fw-semibold">
+                            {{ $message }}
+                        </small>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="type" class="form-label">Tipo</label>
-                    <input type="text" name="type" id="type" placeholder="Tipo" class="form-control"
-                        value="{{ old('type') }}">
+                    <input type="text" name="type" id="type" placeholder="Tipo"
+                        class="form-control @error('type') is-invalid @enderror" value="{{ old('type') }}">
+                    @error('type')
+                        <small class="text-danger fw-semibold">
+                            {{ $message }}
+                        </small>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="artists" class="form-label">Artisti</label>
-                    <input type="text" name="artists" id="artists" placeholder="Tipo" class="form-control"
-                        value="{{ old('artists') }}">
+                    <input type="text" name="artists" id="artists" placeholder="Tipo"
+                        class="form-control @error('artists') is-invalid @enderror" value="{{ old('artists') }}">
+                    @error('artists')
+                        <small class="text-danger fw-semibold">
+                            {{ $message }}
+                        </small>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="writers" class="form-label">Scrittori</label>
-                    <input type="text" name="writers" id="writers" placeholder="Tipo" class="form-control"
-                        value="{{ old('writers') }}">
+                    <input type="text" name="writers" id="writers" placeholder="Tipo"
+                        class="form-control @error('writers') is-invalid @enderror" value="{{ old('writers') }}">
+                    @error('writers')
+                        <small class="text-danger fw-semibold">
+                            {{ $message }}
+                        </small>
+                    @enderror
                 </div>
 
                 <div class="my-2">
